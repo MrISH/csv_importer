@@ -1,0 +1,37 @@
+%center
+  %h1 Import Results
+  = button_to 'upload another file', action: 'index'
+  %br
+  %table
+    %tr
+      = @time
+    %tr
+      %th
+        Entries Created
+      %td
+        = @created_count
+    %tr
+      %th
+        Entries Updated
+      %td
+        = @updated_count
+    %tr
+      %th
+        Total Entries
+      %td
+        = @total_row_count
+    %tr
+      %th
+        Headers
+      %td
+        %ul
+          = @headers.join ', '
+    %tr
+      %th
+        Errors
+      %td
+        %ul
+          - @errors.each do |error|
+            %li
+              = error
+

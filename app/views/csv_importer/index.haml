@@ -1,0 +1,7 @@
+%center
+  %h1 CSV Importer
+  = form_tag csv_importer_import_path, multipart: true do |f|
+    = file_field_tag 'csv_file'
+    = submit_tag 'Import'
+  = @errors
+
