@@ -59,7 +59,7 @@ module Importer
         person_field = csv_row[email_index]
 
         ActiveRecord::Base.connection.execute (<<-EOS)
-          INSERT INTO `people` SET `email`='#{person_field}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `email`='#{person_field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}'
+          INSERT INTO `people` SET `email`='#{person_field}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `email`='#{person_field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}';
         EOS
         @created_count += 1
       end
