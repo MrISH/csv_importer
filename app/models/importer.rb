@@ -1,6 +1,6 @@
 module Importer
   class Csv
-    CSV_GROUP_SIZE = 50000
+    CSV_GROUP_SIZE = 10000
     require "csv"
 
     def self.parse(csv_file_stream)
@@ -23,20 +23,16 @@ module Importer
       end
 
       csv_row_groups.each do |csv_rows|
-        @people_query = ''
-        @everything_else_query = ''
         csv_rows.compact!
         # People
         ActiveRecord::Base.transaction do
-          @people_query = self.create_people_records(csv_rows, csv_headers_to_return)
-          ActiveRecord::Base.connection.execute (@people_query)
+          self.create_people_records(csv_rows, csv_headers_to_return)
         end
         # Tags, Taggings, PeopleData
         ActiveRecord::Base.transaction do
-          @everything_else_query + self.create_tag_records(csv_rows, csv_headers_to_return)
-          @everything_else_query + self.create_taggings_records(csv_rows, csv_headers_to_return)
-          @everything_else_query + self.create_people_data_records(csv_rows, csv_headers_to_return)
-          ActiveRecord::Base.connection.execute (@everything_else_query)
+          self.create_tag_records(csv_rows, csv_headers_to_return)
+          self.create_taggings_records(csv_rows, csv_headers_to_return)
+          self.create_people_data_records(csv_rows, csv_headers_to_return)
         end
       end
 
@@ -62,13 +58,11 @@ module Importer
         email_index = csv_headers.find_index { |x| x == 'email' }
         person_field = csv_row[email_index]
 
-        # ActiveRecord::Base.connection.execute (<<-EOS)
-        @people_query = <<-EOS
-          INSERT INTO `people` SET `email`='#{person_field}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `email`='#{person_field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}';\n
+        ActiveRecord::Base.connection.execute (<<-EOS)
+          INSERT INTO `people` SET `email`='#{person_field}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `email`='#{person_field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}'
         EOS
         @created_count += 1
       end
-      @people_query
     end
 
     def self.create_tag_records(csv_rows, csv_headers_to_return)
@@ -79,14 +73,12 @@ module Importer
         tag_index = csv_headers.find_index { |x| x == 'tags' }
         if !(tags = csv_row[tag_index].split(',')).blank?
           tags.each do |tag|
-            # ActiveRecord::Base.connection.execute (<<-EOS)
-            @everything_else_query = <<-EOS
-              INSERT INTO `tags` SET `name`='#{tag}' ON DUPLICATE KEY UPDATE  `name`='#{tag}';\n
+            ActiveRecord::Base.connection.execute (<<-EOS)
+              INSERT INTO `tags` SET `name`='#{tag}' ON DUPLICATE KEY UPDATE  `name`='#{tag}'
             EOS
           end
         end
       end
-      @everything_else_query
     end
 
     def self.create_taggings_records(csv_rows, csv_headers_to_return)
@@ -102,14 +94,12 @@ module Importer
         if !(tags = csv_row[tag_index]).blank?
           tags.split(',').each do |tag|
             tag = Tag.find_by_name(tag)
-            # ActiveRecord::Base.connection.execute (<<-EOS)
-            @everything_else_query = <<-EOS
-              INSERT INTO `taggings` SET `tag_id`=#{tag.id}, `taggable_id`=#{@person.id rescue 'NULL'}, `taggable_type`='Person', `context`='tags' ON DUPLICATE KEY UPDATE `tag_id`=#{tag.id};\n
+            ActiveRecord::Base.connection.execute (<<-EOS)
+              INSERT INTO `taggings` SET `tag_id`=#{tag.id}, `taggable_id`=#{@person.id rescue 'NULL'}, `taggable_type`='Person', `context`='tags' ON DUPLICATE KEY UPDATE `tag_id`=#{tag.id}
             EOS
           end
         end
       end
-      @everything_else_query
     end
 
     def self.create_people_data_records(csv_rows, csv_headers_to_return)
@@ -136,14 +126,12 @@ module Importer
 
         if !csv_row.blank?
           csv_row.each_with_index do |field, index|
-            # ActiveRecord::Base.connection.execute (<<-EOS)
-              @everything_else_query = <<-EOS
-              INSERT INTO `people_data` SET `value`='#{field}', `person_id`=#{@person.id rescue 'NULL'}, `key`='#{csv_headers[index]}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `value`='#{field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}';\n
+            ActiveRecord::Base.connection.execute (<<-EOS)
+              INSERT INTO `people_data` SET `value`='#{field}', `person_id`=#{@person.id rescue 'NULL'}, `key`='#{csv_headers[index]}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `value`='#{field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}'
             EOS
           end
         end
       end
-      @everything_else_query
     end
 
   end
