@@ -4,17 +4,12 @@
   %br
   %table
     %tr
-      = @time
+      = "#{ @total_row_count.to_s } records parsed in  #{ @time.round(2).to_s } seconds (~#{ (@total_row_count/@time).round } records/s)"
     %tr
       %th
-        Entries Created
+        Entries Successfully Parsed
       %td
         = @created_count
-    %tr
-      %th
-        Entries Updated
-      %td
-        = @updated_count
     %tr
       %th
         Total Entries

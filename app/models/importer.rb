@@ -1,6 +1,6 @@
 module Importer
   class Csv
-    CSV_GROUP_SIZE = 1000
+    CSV_GROUP_SIZE = 10000
     require "csv"
 
     def self.parse(csv_file_stream)
@@ -10,17 +10,16 @@ module Importer
 
       @errors = []
       @created_count = 0
-      @updated_count = 0
       start_time = Time.now
 
       if csv_file.blank?
         @errors << 'You have not selected a file.'
-        return @errors, @created_count, @updated_count, csv_row_groups.size * CSV_GROUP_SIZE, csv_headers_to_return, (Time.now - start_time)
+        return @errors, @created_count, csv_row_groups.size * CSV_GROUP_SIZE, csv_headers_to_return, (Time.now - start_time)
       end
 
       if csv_headers_to_return.first != 'email'
         @errors << 'The first line must be field headers, not data.'
-        return @errors, @created_count, @updated_count, csv_row_groups.size * CSV_GROUP_SIZE, csv_headers_to_return, (Time.now - start_time)
+        return @errors, @created_count, csv_row_groups.size * CSV_GROUP_SIZE, csv_headers_to_return, (Time.now - start_time)
       end
 
       csv_row_groups.each do |csv_rows|
@@ -40,8 +39,10 @@ module Importer
       @errors = ['No errors, YAY!'] if @errors.blank?
       end_time = Time.now
 
-      return @errors, @created_count, @updated_count, @created_count+@updated_count+(@errors.size-1), csv_headers_to_return, (end_time - start_time)
+      return @errors, @created_count, @created_count+(@errors.size-1), csv_headers_to_return, (end_time - start_time)
     end
+
+    private
 
     def self.create_people_records(csv_rows, csv_headers_to_return)
       # People
