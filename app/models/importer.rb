@@ -114,6 +114,8 @@ module Importer
           @errors << "Row: #{csv_row} contained too many fields for the number of headers present."
           next
         end
+        # remove email and tag headers and fields so that key value pairs can be
+        # dynamically created from the remaining columns across any and all imports
         tag_index = csv_headers.find_index { |x| x == 'tags' }
         csv_headers.delete_at(tag_index)
         csv_row.delete_at(tag_index)
