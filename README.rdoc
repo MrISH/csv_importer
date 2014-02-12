@@ -1,5 +1,5 @@
 == CSV Importer
 
-This application demonstrates an efficient and fast way to import a CSV file.
+This application demonstrates an (not so) efficient and fast way to import a CSV file.
 
 That is all.
