@@ -5,7 +5,7 @@ class CsvImporterController < ApplicationController
   end
 
   def import
-    flash[:results] = Importer::Csv.parse_csv(params[:csv_file])
+    flash[:results] = Importer::Csv.parse(params[:csv_file])
     redirect_to action: 'results'
   end
 
