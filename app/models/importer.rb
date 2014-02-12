@@ -41,7 +41,7 @@ module Importer
             person_field = csv_row[email_index]
 
             ActiveRecord::Base.connection.execute (<<-EOS)
-              INSERT INTO `people` SET `email`='#{person_field}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `update_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `email`='#{person_field}', `update_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}'
+              INSERT INTO `people` SET `email`='#{person_field}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `email`='#{person_field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}'
             EOS
             created_count += 1
           end
@@ -104,7 +104,7 @@ module Importer
               csv_row.each_with_index do |field, index|
                 Rails.logger.info csv_headers[index]
                 ActiveRecord::Base.connection.execute (<<-EOS)
-                  INSERT INTO `people_data` SET `value`='#{field}', `person_id`=#{@person.id rescue 'NULL'}, `key`='#{csv_headers[index]}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `update_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `value`='#{field}', `update_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}'
+                  INSERT INTO `people_data` SET `value`='#{field}', `person_id`=#{@person.id rescue 'NULL'}, `key`='#{csv_headers[index]}', `created_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}' ON DUPLICATE KEY UPDATE `value`='#{field}', `updated_at`='#{Time.now.strftime("%Y-%m-%d %I:%M:%S")}'
                 EOS
               end
             end
