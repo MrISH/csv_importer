@@ -19,7 +19,9 @@ ActiveRecord::Schema.define(:version => 20140210234614) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "people_datas", :force => true do |t|
+  add_index "people", ["email"], :name => "index_people_on_email", :unique => true
+
+  create_table "people_data", :force => true do |t|
     t.string   "key"
     t.string   "value"
     t.integer  "person_id"
@@ -27,7 +29,7 @@ ActiveRecord::Schema.define(:version => 20140210234614) do
     t.datetime "updated_at", :null => false
   end
 
-  add_index "people_datas", ["person_id"], :name => "index_people_datas_on_person_id"
+  add_index "people_data", ["person_id", "key"], :name => "index_people_data_on_person_id_and_key", :unique => true
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
@@ -40,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20140210234614) do
   end
 
   add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], :name => "taggings_idx", :unique => true
+  add_index "taggings", ["tag_id", "taggable_id"], :name => "index_taggings_on_tag_id_and_taggable_id", :unique => true
 
   create_table "tags", :force => true do |t|
     t.string "name"

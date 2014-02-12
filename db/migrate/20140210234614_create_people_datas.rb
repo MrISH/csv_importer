@@ -7,6 +7,6 @@ class CreatePeopleDatas < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :people_data, :person_id
+    add_index :people_data, [:person_id, :key], :unique => true
   end
 end

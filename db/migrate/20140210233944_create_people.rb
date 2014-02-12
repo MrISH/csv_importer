@@ -4,5 +4,7 @@ class CreatePeople < ActiveRecord::Migration
       t.column :email, :string
       t.timestamps
     end
+
+    add_index :people, :email, :unique => true
   end
 end

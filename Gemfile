@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.16'
 gem 'mysql2'
+gem 'jquery-rails'
 gem 'acts-as-taggable-on'
 gem 'haml-rails'
-gem 'activerecord-import'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

@@ -13,7 +13,8 @@ class ActsAsTaggableOnMigration < ActiveRecord::Migration
       t.datetime :created_at
     end
 
-    add_index :taggings, :tag_id
+    add_index :taggings, [:tag_id, :taggable_id], :unique => true
+    add_index :tags, :name, :unique => true
     add_index :taggings, [:taggable_id, :taggable_type, :context]
   end
 
