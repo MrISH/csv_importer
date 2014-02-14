@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140210234614) do
+ActiveRecord::Schema.define(:version => 20140213024054) do
 
   create_table "people", :force => true do |t|
     t.string   "email"
@@ -31,6 +31,16 @@ ActiveRecord::Schema.define(:version => 20140210234614) do
 
   add_index "people_data", ["person_id", "key"], :name => "index_people_data_on_person_id_and_key", :unique => true
 
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id",                       :null => false
+    t.text     "data",       :limit => 2147483647
+    t.datetime "created_at",                       :null => false
+    t.datetime "updated_at",                       :null => false
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
     t.integer  "taggable_id"
@@ -45,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20140210234614) do
   add_index "taggings", ["tag_id", "taggable_id"], :name => "index_taggings_on_tag_id_and_taggable_id", :unique => true
 
   create_table "tags", :force => true do |t|
-    t.string "name"
+    t.string "name", :null => false
   end
 
   add_index "tags", ["name"], :name => "index_tags_on_name", :unique => true
