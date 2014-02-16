@@ -5,5 +5,11 @@ class Person < ActiveRecord::Base
   attr_accessible :email, :key, :value
 
   has_many :people_datas
+  has_many :taggings, foreign_key: 'taggable_id'
+  has_many :tags, through: :taggings
+
+  # def tags
+    # taggings.map(&:tag)
+  # end
 
 end
