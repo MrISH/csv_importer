@@ -8,8 +8,4 @@ class Person < ActiveRecord::Base
   has_many :taggings, foreign_key: 'taggable_id'
   has_many :tags, through: :taggings
 
-  # def tags
-    # taggings.map(&:tag)
-  # end
-
 end

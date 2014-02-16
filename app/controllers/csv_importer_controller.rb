@@ -10,7 +10,7 @@ class CsvImporterController < ApplicationController
   end
 
   def results
-    @errors, @created_count, @total_row_count, @headers, @time = flash[:results]
+    @errors, @users_parsed_count, @total_row_count, @headers, @time = flash[:results]
   end
 
 end

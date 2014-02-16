@@ -198,3 +198,270 @@ I, [2014-02-13T08:07:33.371678 #14081]  INFO -- : 0:  mysql2 (0.3.15) from /User
 I, [2014-02-13T08:07:33.371911 #14081]  INFO -- : 0:  sass (3.2.14) from /Users/Ish/.rvm/gems/ruby-2.0.0-p247@csv_importer/specifications/sass-3.2.14.gemspec
 I, [2014-02-13T08:07:33.372147 #14081]  INFO -- : 0:  sass-rails (3.2.6) from /Users/Ish/.rvm/gems/ruby-2.0.0-p247@csv_importer/specifications/sass-rails-3.2.6.gemspec
 I, [2014-02-13T08:07:33.372379 #14081]  INFO -- : 0:  uglifier (2.4.0) from /Users/Ish/.rvm/gems/ruby-2.0.0-p247@csv_importer/specifications/uglifier-2.4.0.gemspec
+I, [2014-02-16T19:33:00.047823 #92583]  INFO -- : 0:  rake (10.1.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/rake-10.1.1.gemspec
+I, [2014-02-16T19:33:00.050408 #92583]  INFO -- : 0:  i18n (0.6.9) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/i18n-0.6.9.gemspec
+I, [2014-02-16T19:33:00.050753 #92583]  INFO -- : 0:  multi_json (1.8.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/multi_json-1.8.4.gemspec
+I, [2014-02-16T19:33:00.051080 #92583]  INFO -- : 0:  activesupport (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activesupport-3.2.16.gemspec
+I, [2014-02-16T19:33:00.051420 #92583]  INFO -- : 0:  builder (3.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/builder-3.0.4.gemspec
+I, [2014-02-16T19:33:00.051781 #92583]  INFO -- : 0:  activemodel (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activemodel-3.2.16.gemspec
+I, [2014-02-16T19:33:00.052107 #92583]  INFO -- : 0:  erubis (2.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/erubis-2.7.0.gemspec
+I, [2014-02-16T19:33:00.052430 #92583]  INFO -- : 0:  journey (1.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/journey-1.0.4.gemspec
+I, [2014-02-16T19:33:00.052756 #92583]  INFO -- : 0:  rack (1.4.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-1.4.5.gemspec
+I, [2014-02-16T19:33:00.053086 #92583]  INFO -- : 0:  rack-cache (1.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-cache-1.2.gemspec
+I, [2014-02-16T19:33:00.053446 #92583]  INFO -- : 0:  rack-test (0.6.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-test-0.6.2.gemspec
+I, [2014-02-16T19:33:00.053774 #92583]  INFO -- : 0:  hike (1.2.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/hike-1.2.3.gemspec
+I, [2014-02-16T19:33:00.054106 #92583]  INFO -- : 0:  tilt (1.4.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tilt-1.4.1.gemspec
+I, [2014-02-16T19:33:00.054431 #92583]  INFO -- : 0:  sprockets (2.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sprockets-2.2.2.gemspec
+I, [2014-02-16T19:33:00.054750 #92583]  INFO -- : 0:  actionpack (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionpack-3.2.16.gemspec
+I, [2014-02-16T19:33:00.055078 #92583]  INFO -- : 0:  mime-types (1.25.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mime-types-1.25.1.gemspec
+I, [2014-02-16T19:33:00.055403 #92583]  INFO -- : 0:  polyglot (0.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/polyglot-0.3.3.gemspec
+I, [2014-02-16T19:33:00.055715 #92583]  INFO -- : 0:  treetop (1.4.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/treetop-1.4.15.gemspec
+I, [2014-02-16T19:33:00.056037 #92583]  INFO -- : 0:  mail (2.5.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mail-2.5.4.gemspec
+I, [2014-02-16T19:33:00.056359 #92583]  INFO -- : 0:  actionmailer (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionmailer-3.2.16.gemspec
+I, [2014-02-16T19:33:00.056696 #92583]  INFO -- : 0:  arel (3.0.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/arel-3.0.3.gemspec
+I, [2014-02-16T19:33:00.057043 #92583]  INFO -- : 0:  tzinfo (0.3.38) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tzinfo-0.3.38.gemspec
+I, [2014-02-16T19:33:00.057396 #92583]  INFO -- : 0:  activerecord (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-3.2.16.gemspec
+E, [2014-02-16T19:33:02.974141 #92583] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+    /Users/Ish/.rvm/rubies/ruby-1.9.3-p484/bin/ruby extconf.rb 
+checking for pg_config... no
+No pg_config... trying anyway. If building fails, please try again with
+ --with-pg-config=/path/to/pg_config
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/bin/ruby
+	--with-pg
+	--without-pg
+	--with-pg-config
+	--without-pg-config
+	--with-pg_config
+	--without-pg_config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/lib
+
+
+Gem files will remain installed in /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/gems/pg-0.17.1 for inspection.
+Results logged to /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/gems/pg-0.17.1/ext/gem_make.out
+
+/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:77:in `run'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/ext_conf_builder.rb:39:in `block in build'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/tempfile.rb:320:in `open'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/ext_conf_builder.rb:19:in `build'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:148:in `block (2 levels) in build_extension'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:147:in `chdir'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:147:in `block in build_extension'  \n<internal:prelude>:10:in `synchronize'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:146:in `build_extension'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:180:in `block in build_extensions'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:177:in `each'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:177:in `build_extensions'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:667:in `build_extensions'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:225:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/cli.rb:257:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/bin/bundle:23:in `load'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/bin/bundle:23:in `<main>'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/bin/ruby_executable_hooks:15:in `eval'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/bin/ruby_executable_hooks:15:in `<main>'
+I, [2014-02-16T19:38:28.496459 #93421]  INFO -- : 0:  rake (10.1.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/rake-10.1.1.gemspec
+I, [2014-02-16T19:38:28.499015 #93421]  INFO -- : 0:  i18n (0.6.9) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/i18n-0.6.9.gemspec
+I, [2014-02-16T19:38:28.499678 #93421]  INFO -- : 0:  multi_json (1.8.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/multi_json-1.8.4.gemspec
+I, [2014-02-16T19:38:28.500197 #93421]  INFO -- : 0:  activesupport (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activesupport-3.2.16.gemspec
+I, [2014-02-16T19:38:28.500666 #93421]  INFO -- : 0:  builder (3.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/builder-3.0.4.gemspec
+I, [2014-02-16T19:38:28.501130 #93421]  INFO -- : 0:  activemodel (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activemodel-3.2.16.gemspec
+I, [2014-02-16T19:38:28.501593 #93421]  INFO -- : 0:  erubis (2.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/erubis-2.7.0.gemspec
+I, [2014-02-16T19:38:28.502081 #93421]  INFO -- : 0:  journey (1.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/journey-1.0.4.gemspec
+I, [2014-02-16T19:38:28.502641 #93421]  INFO -- : 0:  rack (1.4.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-1.4.5.gemspec
+I, [2014-02-16T19:38:28.503147 #93421]  INFO -- : 0:  rack-cache (1.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-cache-1.2.gemspec
+I, [2014-02-16T19:38:28.503595 #93421]  INFO -- : 0:  rack-test (0.6.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-test-0.6.2.gemspec
+I, [2014-02-16T19:38:28.504044 #93421]  INFO -- : 0:  hike (1.2.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/hike-1.2.3.gemspec
+I, [2014-02-16T19:38:28.504577 #93421]  INFO -- : 0:  tilt (1.4.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tilt-1.4.1.gemspec
+I, [2014-02-16T19:38:28.504998 #93421]  INFO -- : 0:  sprockets (2.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sprockets-2.2.2.gemspec
+I, [2014-02-16T19:38:28.505423 #93421]  INFO -- : 0:  actionpack (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionpack-3.2.16.gemspec
+I, [2014-02-16T19:38:28.505853 #93421]  INFO -- : 0:  mime-types (1.25.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mime-types-1.25.1.gemspec
+I, [2014-02-16T19:38:28.506206 #93421]  INFO -- : 0:  polyglot (0.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/polyglot-0.3.3.gemspec
+I, [2014-02-16T19:38:28.506533 #93421]  INFO -- : 0:  treetop (1.4.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/treetop-1.4.15.gemspec
+I, [2014-02-16T19:38:28.507438 #93421]  INFO -- : 0:  mail (2.5.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mail-2.5.4.gemspec
+I, [2014-02-16T19:38:28.507785 #93421]  INFO -- : 0:  actionmailer (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionmailer-3.2.16.gemspec
+I, [2014-02-16T19:38:28.508103 #93421]  INFO -- : 0:  arel (3.0.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/arel-3.0.3.gemspec
+I, [2014-02-16T19:38:28.508488 #93421]  INFO -- : 0:  tzinfo (0.3.38) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tzinfo-0.3.38.gemspec
+I, [2014-02-16T19:38:28.508809 #93421]  INFO -- : 0:  activerecord (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-3.2.16.gemspec
+E, [2014-02-16T19:38:29.068973 #93421] ERROR -- : Gem::Installer::ExtensionBuildError: ERROR: Failed to build gem native extension.
+
+    /Users/Ish/.rvm/rubies/ruby-1.9.3-p484/bin/ruby extconf.rb 
+checking for pg_config... no
+No pg_config... trying anyway. If building fails, please try again with
+ --with-pg-config=/path/to/pg_config
+checking for libpq-fe.h... no
+Can't find the 'libpq-fe.h header
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/bin/ruby
+	--with-pg
+	--without-pg
+	--with-pg-config
+	--without-pg-config
+	--with-pg_config
+	--without-pg_config
+	--with-pg-dir
+	--without-pg-dir
+	--with-pg-include
+	--without-pg-include=${pg-dir}/include
+	--with-pg-lib
+	--without-pg-lib=${pg-dir}/lib
+
+
+Gem files will remain installed in /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/gems/pg-0.17.1 for inspection.
+Results logged to /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/gems/pg-0.17.1/ext/gem_make.out
+
+/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:77:in `run'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/ext_conf_builder.rb:39:in `block in build'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/tempfile.rb:320:in `open'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/ext_conf_builder.rb:19:in `build'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:148:in `block (2 levels) in build_extension'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:147:in `chdir'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:147:in `block in build_extension'  \n<internal:prelude>:10:in `synchronize'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:146:in `build_extension'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:180:in `block in build_extensions'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:177:in `each'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/ext/builder.rb:177:in `build_extensions'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:667:in `build_extensions'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/site_ruby/1.9.1/rubygems/installer.rb:225:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:95:in `block in install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:118:in `preserve_paths'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/source/rubygems.rb:94:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:111:in `block in install_gem_from_spec'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/rubygems_integration.rb:150:in `with_build_args'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:110:in `install_gem_from_spec'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:295:in `block in install_sequentially'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \n/Users/Ish/.rvm/rubies/ruby-1.9.3-p484/lib/ruby/1.9.1/forwardable.rb:201:in `each'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:294:in `install_sequentially'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:97:in `run'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/installer.rb:15:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/cli.rb:257:in `install'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/command.rb:27:in `run'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/invocation.rb:120:in `invoke_command'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor.rb:363:in `dispatch'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/vendor/thor/base.rb:438:in `start'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/cli.rb:10:in `start'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/bin/bundle:22:in `block in <top (required)>'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/lib/bundler/friendly_errors.rb:5:in `with_friendly_errors'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/gems/bundler-1.5.1/bin/bundle:22:in `<top (required)>'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/bin/bundle:23:in `load'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/bin/bundle:23:in `<main>'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/bin/ruby_executable_hooks:15:in `eval'  \n/Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/bin/ruby_executable_hooks:15:in `<main>'
+I, [2014-02-16T19:41:14.995590 #94738]  INFO -- : 0:  rake (10.1.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/rake-10.1.1.gemspec
+I, [2014-02-16T19:41:14.996368 #94738]  INFO -- : 0:  i18n (0.6.9) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/i18n-0.6.9.gemspec
+I, [2014-02-16T19:41:14.996697 #94738]  INFO -- : 0:  multi_json (1.8.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/multi_json-1.8.4.gemspec
+I, [2014-02-16T19:41:14.997024 #94738]  INFO -- : 0:  activesupport (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activesupport-3.2.16.gemspec
+I, [2014-02-16T19:41:14.997338 #94738]  INFO -- : 0:  builder (3.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/builder-3.0.4.gemspec
+I, [2014-02-16T19:41:14.997630 #94738]  INFO -- : 0:  activemodel (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activemodel-3.2.16.gemspec
+I, [2014-02-16T19:41:14.997924 #94738]  INFO -- : 0:  erubis (2.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/erubis-2.7.0.gemspec
+I, [2014-02-16T19:41:14.998227 #94738]  INFO -- : 0:  journey (1.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/journey-1.0.4.gemspec
+I, [2014-02-16T19:41:14.998531 #94738]  INFO -- : 0:  rack (1.4.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-1.4.5.gemspec
+I, [2014-02-16T19:41:14.998859 #94738]  INFO -- : 0:  rack-cache (1.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-cache-1.2.gemspec
+I, [2014-02-16T19:41:14.999166 #94738]  INFO -- : 0:  rack-test (0.6.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-test-0.6.2.gemspec
+I, [2014-02-16T19:41:14.999483 #94738]  INFO -- : 0:  hike (1.2.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/hike-1.2.3.gemspec
+I, [2014-02-16T19:41:14.999807 #94738]  INFO -- : 0:  tilt (1.4.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tilt-1.4.1.gemspec
+I, [2014-02-16T19:41:15.000113 #94738]  INFO -- : 0:  sprockets (2.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sprockets-2.2.2.gemspec
+I, [2014-02-16T19:41:15.000436 #94738]  INFO -- : 0:  actionpack (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionpack-3.2.16.gemspec
+I, [2014-02-16T19:41:15.000735 #94738]  INFO -- : 0:  mime-types (1.25.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mime-types-1.25.1.gemspec
+I, [2014-02-16T19:41:15.001069 #94738]  INFO -- : 0:  polyglot (0.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/polyglot-0.3.3.gemspec
+I, [2014-02-16T19:41:15.001375 #94738]  INFO -- : 0:  treetop (1.4.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/treetop-1.4.15.gemspec
+I, [2014-02-16T19:41:15.001686 #94738]  INFO -- : 0:  mail (2.5.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mail-2.5.4.gemspec
+I, [2014-02-16T19:41:15.001996 #94738]  INFO -- : 0:  actionmailer (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionmailer-3.2.16.gemspec
+I, [2014-02-16T19:41:15.002298 #94738]  INFO -- : 0:  arel (3.0.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/arel-3.0.3.gemspec
+I, [2014-02-16T19:41:15.002601 #94738]  INFO -- : 0:  tzinfo (0.3.38) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tzinfo-0.3.38.gemspec
+I, [2014-02-16T19:41:15.002914 #94738]  INFO -- : 0:  activerecord (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-3.2.16.gemspec
+I, [2014-02-16T19:41:20.678520 #94738]  INFO -- : 0:  pg (0.17.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/pg-0.17.1.gemspec
+I, [2014-02-16T19:41:22.138916 #94738]  INFO -- : 0:  activerecord-postgresql-adapter (0.0.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-postgresql-adapter-0.0.1.gemspec
+I, [2014-02-16T19:41:22.139452 #94738]  INFO -- : 0:  activeresource (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activeresource-3.2.16.gemspec
+I, [2014-02-16T19:41:22.139865 #94738]  INFO -- : 0:  bundler (1.5.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/bundler-1.5.1.gemspec
+I, [2014-02-16T19:41:22.140285 #94738]  INFO -- : 0:  rack-ssl (1.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-ssl-1.3.3.gemspec
+I, [2014-02-16T19:41:22.140667 #94738]  INFO -- : 0:  json (1.8.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/json-1.8.1.gemspec
+I, [2014-02-16T19:41:22.141033 #94738]  INFO -- : 0:  rdoc (3.12.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rdoc-3.12.2.gemspec
+I, [2014-02-16T19:41:22.141361 #94738]  INFO -- : 0:  thor (0.18.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/thor-0.18.1.gemspec
+I, [2014-02-16T19:41:22.141680 #94738]  INFO -- : 0:  railties (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/railties-3.2.16.gemspec
+I, [2014-02-16T19:41:22.141996 #94738]  INFO -- : 0:  rails (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rails-3.2.16.gemspec
+I, [2014-02-16T19:41:22.142311 #94738]  INFO -- : 0:  acts-as-taggable-on (3.0.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/acts-as-taggable-on-3.0.1.gemspec
+I, [2014-02-16T19:41:22.142631 #94738]  INFO -- : 0:  coffee-script-source (1.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-02-16T19:41:22.142950 #94738]  INFO -- : 0:  execjs (2.0.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/execjs-2.0.2.gemspec
+I, [2014-02-16T19:41:22.143280 #94738]  INFO -- : 0:  coffee-script (2.2.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-script-2.2.0.gemspec
+I, [2014-02-16T19:41:22.143597 #94738]  INFO -- : 0:  coffee-rails (3.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-rails-3.2.2.gemspec
+I, [2014-02-16T19:41:22.143912 #94738]  INFO -- : 0:  haml (4.0.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/haml-4.0.5.gemspec
+I, [2014-02-16T19:41:22.144221 #94738]  INFO -- : 0:  haml-rails (0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/haml-rails-0.4.gemspec
+I, [2014-02-16T19:41:22.144528 #94738]  INFO -- : 0:  jquery-rails (3.1.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-02-16T19:41:22.144835 #94738]  INFO -- : 0:  mysql2 (0.3.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mysql2-0.3.15.gemspec
+I, [2014-02-16T19:41:22.145141 #94738]  INFO -- : 0:  sass (3.2.14) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sass-3.2.14.gemspec
+I, [2014-02-16T19:41:22.145444 #94738]  INFO -- : 0:  sass-rails (3.2.6) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sass-rails-3.2.6.gemspec
+I, [2014-02-16T19:41:22.145776 #94738]  INFO -- : 0:  uglifier (2.4.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/uglifier-2.4.0.gemspec
+I, [2014-02-16T20:31:47.232135 #97629]  INFO -- : 0:  rake (10.1.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/rake-10.1.1.gemspec
+I, [2014-02-16T20:31:47.233870 #97629]  INFO -- : 0:  i18n (0.6.9) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/i18n-0.6.9.gemspec
+I, [2014-02-16T20:31:47.234221 #97629]  INFO -- : 0:  multi_json (1.8.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/multi_json-1.8.4.gemspec
+I, [2014-02-16T20:31:47.234547 #97629]  INFO -- : 0:  activesupport (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activesupport-3.2.16.gemspec
+I, [2014-02-16T20:31:47.234875 #97629]  INFO -- : 0:  builder (3.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/builder-3.0.4.gemspec
+I, [2014-02-16T20:31:47.235220 #97629]  INFO -- : 0:  activemodel (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activemodel-3.2.16.gemspec
+I, [2014-02-16T20:31:47.235603 #97629]  INFO -- : 0:  erubis (2.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/erubis-2.7.0.gemspec
+I, [2014-02-16T20:31:47.235962 #97629]  INFO -- : 0:  journey (1.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/journey-1.0.4.gemspec
+I, [2014-02-16T20:31:47.236311 #97629]  INFO -- : 0:  rack (1.4.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-1.4.5.gemspec
+I, [2014-02-16T20:31:47.236681 #97629]  INFO -- : 0:  rack-cache (1.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-cache-1.2.gemspec
+I, [2014-02-16T20:31:47.237074 #97629]  INFO -- : 0:  rack-test (0.6.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-test-0.6.2.gemspec
+I, [2014-02-16T20:31:47.237459 #97629]  INFO -- : 0:  hike (1.2.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/hike-1.2.3.gemspec
+I, [2014-02-16T20:31:47.237832 #97629]  INFO -- : 0:  tilt (1.4.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tilt-1.4.1.gemspec
+I, [2014-02-16T20:31:47.238226 #97629]  INFO -- : 0:  sprockets (2.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sprockets-2.2.2.gemspec
+I, [2014-02-16T20:31:47.245352 #97629]  INFO -- : 0:  actionpack (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionpack-3.2.16.gemspec
+I, [2014-02-16T20:31:47.245739 #97629]  INFO -- : 0:  mime-types (1.25.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mime-types-1.25.1.gemspec
+I, [2014-02-16T20:31:47.246058 #97629]  INFO -- : 0:  polyglot (0.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/polyglot-0.3.3.gemspec
+I, [2014-02-16T20:31:47.246357 #97629]  INFO -- : 0:  treetop (1.4.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/treetop-1.4.15.gemspec
+I, [2014-02-16T20:31:47.246652 #97629]  INFO -- : 0:  mail (2.5.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mail-2.5.4.gemspec
+I, [2014-02-16T20:31:47.246947 #97629]  INFO -- : 0:  actionmailer (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionmailer-3.2.16.gemspec
+I, [2014-02-16T20:31:47.247239 #97629]  INFO -- : 0:  arel (3.0.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/arel-3.0.3.gemspec
+I, [2014-02-16T20:31:47.247531 #97629]  INFO -- : 0:  tzinfo (0.3.38) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tzinfo-0.3.38.gemspec
+I, [2014-02-16T20:31:47.247823 #97629]  INFO -- : 0:  activerecord (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-3.2.16.gemspec
+I, [2014-02-16T20:31:47.248116 #97629]  INFO -- : 0:  activerecord-import (0.4.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-import-0.4.1.gemspec
+I, [2014-02-16T20:31:47.248418 #97629]  INFO -- : 0:  pg (0.17.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/pg-0.17.1.gemspec
+I, [2014-02-16T20:31:47.248713 #97629]  INFO -- : 0:  activerecord-postgresql-adapter (0.0.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-postgresql-adapter-0.0.1.gemspec
+I, [2014-02-16T20:31:47.249003 #97629]  INFO -- : 0:  activeresource (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activeresource-3.2.16.gemspec
+I, [2014-02-16T20:31:47.249284 #97629]  INFO -- : 0:  bundler (1.5.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/bundler-1.5.1.gemspec
+I, [2014-02-16T20:31:47.249572 #97629]  INFO -- : 0:  rack-ssl (1.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-ssl-1.3.3.gemspec
+I, [2014-02-16T20:31:47.249874 #97629]  INFO -- : 0:  json (1.8.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/json-1.8.1.gemspec
+I, [2014-02-16T20:31:47.250168 #97629]  INFO -- : 0:  rdoc (3.12.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rdoc-3.12.2.gemspec
+I, [2014-02-16T20:31:47.250459 #97629]  INFO -- : 0:  thor (0.18.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/thor-0.18.1.gemspec
+I, [2014-02-16T20:31:47.250758 #97629]  INFO -- : 0:  railties (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/railties-3.2.16.gemspec
+I, [2014-02-16T20:31:47.251049 #97629]  INFO -- : 0:  rails (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rails-3.2.16.gemspec
+I, [2014-02-16T20:31:47.251338 #97629]  INFO -- : 0:  acts-as-taggable-on (3.0.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/acts-as-taggable-on-3.0.1.gemspec
+I, [2014-02-16T20:31:47.251630 #97629]  INFO -- : 0:  coffee-script-source (1.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-02-16T20:31:47.251919 #97629]  INFO -- : 0:  execjs (2.0.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/execjs-2.0.2.gemspec
+I, [2014-02-16T20:31:47.252210 #97629]  INFO -- : 0:  coffee-script (2.2.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-script-2.2.0.gemspec
+I, [2014-02-16T20:31:47.252499 #97629]  INFO -- : 0:  coffee-rails (3.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-rails-3.2.2.gemspec
+I, [2014-02-16T20:31:47.252787 #97629]  INFO -- : 0:  haml (4.0.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/haml-4.0.5.gemspec
+I, [2014-02-16T20:31:47.253084 #97629]  INFO -- : 0:  haml-rails (0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/haml-rails-0.4.gemspec
+I, [2014-02-16T20:31:47.253381 #97629]  INFO -- : 0:  jquery-rails (3.1.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-02-16T20:31:47.253678 #97629]  INFO -- : 0:  mysql2 (0.3.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mysql2-0.3.15.gemspec
+I, [2014-02-16T20:31:47.253975 #97629]  INFO -- : 0:  sass (3.2.14) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sass-3.2.14.gemspec
+I, [2014-02-16T20:31:47.254272 #97629]  INFO -- : 0:  sass-rails (3.2.6) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sass-rails-3.2.6.gemspec
+I, [2014-02-16T20:31:47.254603 #97629]  INFO -- : 0:  uglifier (2.4.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/uglifier-2.4.0.gemspec
+I, [2014-02-16T22:52:22.203773 #6677]  INFO -- : 0:  rake (10.1.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/rake-10.1.1.gemspec
+I, [2014-02-16T22:52:22.205390 #6677]  INFO -- : 0:  i18n (0.6.9) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/i18n-0.6.9.gemspec
+I, [2014-02-16T22:52:22.205744 #6677]  INFO -- : 0:  multi_json (1.8.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/multi_json-1.8.4.gemspec
+I, [2014-02-16T22:52:22.206071 #6677]  INFO -- : 0:  activesupport (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activesupport-3.2.16.gemspec
+I, [2014-02-16T22:52:22.206410 #6677]  INFO -- : 0:  builder (3.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/builder-3.0.4.gemspec
+I, [2014-02-16T22:52:22.206790 #6677]  INFO -- : 0:  activemodel (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activemodel-3.2.16.gemspec
+I, [2014-02-16T22:52:22.207148 #6677]  INFO -- : 0:  erubis (2.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/erubis-2.7.0.gemspec
+I, [2014-02-16T22:52:22.207476 #6677]  INFO -- : 0:  journey (1.0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/journey-1.0.4.gemspec
+I, [2014-02-16T22:52:22.207801 #6677]  INFO -- : 0:  rack (1.4.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-1.4.5.gemspec
+I, [2014-02-16T22:52:22.208118 #6677]  INFO -- : 0:  rack-cache (1.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-cache-1.2.gemspec
+I, [2014-02-16T22:52:22.208442 #6677]  INFO -- : 0:  rack-test (0.6.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-test-0.6.2.gemspec
+I, [2014-02-16T22:52:22.208768 #6677]  INFO -- : 0:  hike (1.2.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/hike-1.2.3.gemspec
+I, [2014-02-16T22:52:22.209104 #6677]  INFO -- : 0:  tilt (1.4.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tilt-1.4.1.gemspec
+I, [2014-02-16T22:52:22.209409 #6677]  INFO -- : 0:  sprockets (2.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sprockets-2.2.2.gemspec
+I, [2014-02-16T22:52:22.217357 #6677]  INFO -- : 0:  actionpack (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionpack-3.2.16.gemspec
+I, [2014-02-16T22:52:22.217718 #6677]  INFO -- : 0:  mime-types (1.25.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mime-types-1.25.1.gemspec
+I, [2014-02-16T22:52:22.218008 #6677]  INFO -- : 0:  polyglot (0.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/polyglot-0.3.3.gemspec
+I, [2014-02-16T22:52:22.218295 #6677]  INFO -- : 0:  treetop (1.4.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/treetop-1.4.15.gemspec
+I, [2014-02-16T22:52:22.218578 #6677]  INFO -- : 0:  mail (2.5.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mail-2.5.4.gemspec
+I, [2014-02-16T22:52:22.218861 #6677]  INFO -- : 0:  actionmailer (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/actionmailer-3.2.16.gemspec
+I, [2014-02-16T22:52:22.219160 #6677]  INFO -- : 0:  arel (3.0.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/arel-3.0.3.gemspec
+I, [2014-02-16T22:52:22.219443 #6677]  INFO -- : 0:  tzinfo (0.3.38) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/tzinfo-0.3.38.gemspec
+I, [2014-02-16T22:52:22.219725 #6677]  INFO -- : 0:  activerecord (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-3.2.16.gemspec
+I, [2014-02-16T22:52:22.220009 #6677]  INFO -- : 0:  activerecord-import (0.4.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-import-0.4.1.gemspec
+I, [2014-02-16T22:52:22.220289 #6677]  INFO -- : 0:  pg (0.17.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/pg-0.17.1.gemspec
+I, [2014-02-16T22:52:22.220572 #6677]  INFO -- : 0:  activerecord-postgresql-adapter (0.0.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activerecord-postgresql-adapter-0.0.1.gemspec
+I, [2014-02-16T22:52:22.220854 #6677]  INFO -- : 0:  activeresource (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/activeresource-3.2.16.gemspec
+I, [2014-02-16T22:52:22.221125 #6677]  INFO -- : 0:  bundler (1.5.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@global/specifications/bundler-1.5.1.gemspec
+I, [2014-02-16T22:52:22.221406 #6677]  INFO -- : 0:  rack-ssl (1.3.3) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rack-ssl-1.3.3.gemspec
+I, [2014-02-16T22:52:22.221698 #6677]  INFO -- : 0:  json (1.8.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/json-1.8.1.gemspec
+I, [2014-02-16T22:52:22.221985 #6677]  INFO -- : 0:  rdoc (3.12.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rdoc-3.12.2.gemspec
+I, [2014-02-16T22:52:22.222270 #6677]  INFO -- : 0:  thor (0.18.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/thor-0.18.1.gemspec
+I, [2014-02-16T22:52:22.222555 #6677]  INFO -- : 0:  railties (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/railties-3.2.16.gemspec
+I, [2014-02-16T22:52:22.222845 #6677]  INFO -- : 0:  rails (3.2.16) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/rails-3.2.16.gemspec
+I, [2014-02-16T22:52:22.223159 #6677]  INFO -- : 0:  acts-as-taggable-on (3.0.1) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/acts-as-taggable-on-3.0.1.gemspec
+I, [2014-02-16T22:52:22.223530 #6677]  INFO -- : 0:  coffee-script-source (1.7.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-script-source-1.7.0.gemspec
+I, [2014-02-16T22:52:22.223820 #6677]  INFO -- : 0:  execjs (2.0.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/execjs-2.0.2.gemspec
+I, [2014-02-16T22:52:22.224108 #6677]  INFO -- : 0:  coffee-script (2.2.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-script-2.2.0.gemspec
+I, [2014-02-16T22:52:22.224394 #6677]  INFO -- : 0:  coffee-rails (3.2.2) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/coffee-rails-3.2.2.gemspec
+I, [2014-02-16T22:52:22.224679 #6677]  INFO -- : 0:  haml (4.0.5) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/haml-4.0.5.gemspec
+I, [2014-02-16T22:52:22.224977 #6677]  INFO -- : 0:  haml-rails (0.4) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/haml-rails-0.4.gemspec
+I, [2014-02-16T22:52:22.225291 #6677]  INFO -- : 0:  jquery-rails (3.1.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/jquery-rails-3.1.0.gemspec
+I, [2014-02-16T22:52:22.225655 #6677]  INFO -- : 0:  mysql2 (0.3.15) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/mysql2-0.3.15.gemspec
+I, [2014-02-16T22:52:22.226034 #6677]  INFO -- : 0:  sass (3.2.14) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sass-3.2.14.gemspec
+I, [2014-02-16T22:52:22.226445 #6677]  INFO -- : 0:  sass-rails (3.2.6) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/sass-rails-3.2.6.gemspec
+I, [2014-02-16T22:52:22.226810 #6677]  INFO -- : 0:  uglifier (2.4.0) from /Users/Ish/.rvm/gems/ruby-1.9.3-p484@csv_importer/specifications/uglifier-2.4.0.gemspec
