@@ -162,7 +162,7 @@ module Importer
     end
 
     def self.call_mysql(file_name)
-      system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] }  #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } -e "source #{ file_name }") )
+      system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] } #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } < #{ file_name }) )
     end
 
     def self.write_sql_file(file_name, sql_column_names, values)
