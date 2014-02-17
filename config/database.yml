@@ -1,7 +1,6 @@
 # PostGRES
 development:
   adapter: postgresql
-  encoding: unicode
   database: csv_importer_dev
   username: postgres
   password: password

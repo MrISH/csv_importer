@@ -16,32 +16,28 @@ module Importer
       people_file_name, tag_file_name = self.build_sql_for_people_and_tags
       case DATABASE_CONFIG[:adapter]
       when /postgresql/
-        # send system command to PostGRES DB to create people
-        system( %(psql 'user=#{ DATABASE_CONFIG[:username] } #{ 'password=' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } host=#{ DATABASE_CONFIG[:host] || 'localhost' } port=#{ DATABASE_CONFIG[:port] || '5432' } dbname=#{ DATABASE_CONFIG[:database] }' -f #{ people_file_name }) )
-        # send system command to PostGRES DB to create tags
-        system( %(psql 'user=#{ DATABASE_CONFIG[:username] } #{ 'password=' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } host=#{ DATABASE_CONFIG[:host] || 'localhost' } port=#{ DATABASE_CONFIG[:port] || '5432' } dbname=#{ DATABASE_CONFIG[:database] }' -f #{ tag_file_name }) )
+        self.call_postgres(people_file_name)
+        self.call_postgres(tag_file_name)
       when /mysql2/
-        # send system command to MySQL DB to create people
-        system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] }  #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } -e "source #{ people_file_name }") )
-        # send system command to MySQL DB to create tags
-        system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] }  #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } -e "source #{ tag_file_name }") )
+        self.call_mysql(people_file_name)
+        self.call_mysql(tag_file_name)
       end
+      # used in self.build_people_hash && self.all_tag_ids_by_tag_name
+      # because postgres has an issue finding all
+      @person_count = Person.count
+      @tag_count = Tag.count
+      # wait until people records have been created/updated, as everything is related
+      sleep 0.1 until Person.count >= @users_parsed_count
 
-      sleep 0.1 until @users_parsed_count > (%x[wc -l 'tmp/csv_file.csv'].split(' ').first.to_i - 10)
-      "  200001 tmp/csv_file.csv\n"
-
-      taggings_file_name, people_datafile_name = self.build_sql_for_taggings_and_people_data
+      taggings_file_name, people_data_file_name = self.build_sql_for_taggings_and_people_data
       case DATABASE_CONFIG[:adapter]
       when /postgresql/
-        # send system command to PostGRES DB to create taggings join records
-        system( %(psql 'user=#{ DATABASE_CONFIG[:username] } #{ 'password=' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } host=#{ DATABASE_CONFIG[:host] || 'localhost' } port=#{ DATABASE_CONFIG[:port] || '5432' } dbname=#{ DATABASE_CONFIG[:database] }' -f #{ taggings_file_name }) )
-        # send system command to PostGRES DB to create people datas
-        system( %(psql 'user=#{ DATABASE_CONFIG[:username] } #{ 'password=' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } host=#{ DATABASE_CONFIG[:host] || 'localhost' } port=#{ DATABASE_CONFIG[:port] || '5432' } dbname=#{ DATABASE_CONFIG[:database] }' -f #{ people_datafile_name }) )
+        self.call_postgres(taggings_file_name)
+        self.call_postgres(people_data_file_name)
       when /mysql2/
-        # send system command to MySQL DB to create taggings join records
-        system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] }  #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } -e "source #{ taggings_file_name }") )
-        # send system command to MySQL DB to create people datas
-        system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] }  #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } -e "source #{ people_datafile_name }") )
+        taggings_file_name, people_data_file_name = self.build_sql_for_taggings_and_people_data
+        self.call_mysql(taggings_file_name)
+        self.call_mysql(people_data_file_name)
       end
 
       @errors = ['No errors, YAY!'] if @errors.blank?
@@ -76,29 +72,17 @@ module Importer
         people_values << values_sql_beginning + csv_row['email'] + "','" + time + "','" + time + "')" if !csv_row['email'].blank? || people['email'].blank?
         @users_parsed_count += 1
 
-        if !csv_row.blank? && !csv_row['tags'].blank? && all_tag_ids_by_tag_name[csv_row['tags']].blank?
-          tag_values << csv_row['tags'].split(',').compact.map { |tag|
+        tag_values << if !csv_row.blank? && !csv_row['tags'].blank? && all_tag_ids_by_tag_name[csv_row['tags']].blank?
+          csv_row['tags'].split(',').compact.map { |tag|
             values_sql_beginning + tag + "')"
           }
         end
       }
+      people_values = people_values.compact.uniq.join(',')
+      tag_values = tag_values.flatten.compact.uniq.join(',')
 
-      if people_values.blank?
-        File.delete(people_file_name)
-        people_file_name = ''
-      else
-        File.open(people_file_name, 'a+') { |f|
-          f.write('email,created_at,updated_at) VALUES ' + people_values.flatten.uniq.join(',') + ';')
-        }
-      end
-      if tag_values.blank?
-        File.delete(tag_file_name)
-        tag_file_name = ''
-      else
-        File.open(tag_file_name, 'a+') { |f|
-          f.write('name) VALUES ' + tag_values.flatten.uniq.join(',') + ';')
-        }
-      end
+      self.write_sql_file(people_file_name, 'email,created_at,updated_at) VALUES ', people_values )
+      self.write_sql_file(tag_file_name, 'name) VALUES ', tag_values )
       return people_file_name, tag_file_name
     # rescue
     #   @errors << 'build_sql_for_people_and_tags failed to build SQL'
@@ -109,21 +93,21 @@ module Importer
       case DATABASE_CONFIG[:adapter]
       when /mysql2/
         taggings_file_name = 'tmp/taggings_mysql.sql'
-        people_datafile_name = 'tmp/people_data_mysql.sql'
+        people_data_file_name = 'tmp/people_data_mysql.sql'
         File.open(taggings_file_name, 'w+') { |f| f.write( GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + 'INSERT IGNORE INTO taggings (id,' )}
-        File.open(people_datafile_name, 'w+') { |f| f.write( GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + %Q[INSERT IGNORE INTO people_data (id,\`key\`,\`value\`,] )}
+        # because this table has column names 'key' and 'value', we need to use the %Q[] string thing to enable proper escaping of \`
+        File.open(people_data_file_name, 'w+') { |f| f.write( GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + %Q[INSERT IGNORE INTO people_data (id,\`key\`,\`value\`,] )}
         values_sql_beginning = "('','"
       when /postgresql/
         taggings_file_name = 'tmp/taggings_postgres.sql'
-        people_datafile_name = 'tmp/people_data_postgres.sql'
+        people_data_file_name = 'tmp/people_data_postgres.sql'
         File.open(taggings_file_name, 'w+') { |f| f.write( 'INSERT INTO taggings (' )}
-        File.open(people_datafile_name, 'w+') { |f| f.write( 'INSERT INTO people_data (key,value,' )}
+        File.open(people_data_file_name, 'w+') { |f| f.write( 'INSERT INTO people_data (key,value,' )}
         values_sql_beginning = "('"
       end
       time = Time.now.strftime('%Y-%m-%d %I:%M:%S')
       taggings_values = []
       people_data_values = []
-
       people = self.build_people_hash
       all_tag_ids_by_tag_name = self.all_tag_ids_by_tag_name
 
@@ -131,11 +115,11 @@ module Importer
         if !csv_row['tags'].blank?
           person_data = people[csv_row['email']]
           csv_row['tags'].split(',').compact.map { |tag_from_row|
-            taggings_values << values_sql_beginning + (all_tag_ids_by_tag_name[tag_from_row].to_s rescue 'NULL') + "','" + (person_data[:record].id.to_s rescue 'null') + "','Person','tags','" + time + "')"
+            taggings_values << values_sql_beginning + (all_tag_ids_by_tag_name[tag_from_row].to_s rescue '') + "','" + (person_data[:record].id.to_s rescue '') + "','Person','tags','" + time + "')"
           }
 
           csv_row.delete_if{ |f| f[0] == 'email' || f[0] == 'tags' }.map { |field|
-            if field[0].blank? || field[1].blank? || person_data.blank?
+            if field[1] == '' || person_data.blank?
               next
             end
             people_data_values << values_sql_beginning + field[0].to_s + "','" + field[1].to_s + "','" + person_data[:record].id.to_s + "','" + time + "','" + time + "')"
@@ -143,34 +127,19 @@ module Importer
         end
       }
 
-      taggings_values = taggings_values.uniq.join(',')
-      people_data_values = people_data_values.uniq.join(',')
+      taggings_values = taggings_values.flatten.compact.uniq.join(',')
+      people_data_values = people_data_values.flatten.compact.uniq.join(',')
 
-      if taggings_values.blank?
-        File.delete(taggings_file_name)
-        taggings_file_name = ''
-      else
-        File.open(taggings_file_name, 'a+') { |f|
-          f.write( 'tag_id,taggable_id,taggable_type,context,created_at) VALUES ' + taggings_values + ';' )
-        }
-      end
-      if people_data_values.blank?
-        File.delete(people_datafile_name)
-        people_datafile_name = ''
-      else
-        File.open(people_datafile_name, 'a+') { |f|
-          # because this table has column names 'key' and 'value', we need to use the %Q[] string thing to enable proper escaping of \`
-          f.write( 'person_id,created_at,updated_at) VALUES ' + people_data_values + ';' )
-        }
-      end
-      return taggings_file_name, people_datafile_name
+      self.write_sql_file(taggings_file_name, 'tag_id,taggable_id,taggable_type,context,created_at) VALUES ', taggings_values )
+      self.write_sql_file(people_data_file_name, 'person_id,created_at,updated_at) VALUES ', people_data_values )
+      return taggings_file_name, people_data_file_name
     # rescue
     #   @errors << 'build_sql_for_taggings_and_people_data failed to build SQL'
     end
 
     def self.build_people_hash
       results_hash = {}
-      Person.all.each { |p|
+      Person.find(:all, limit: @person_count).each { |p|
         results_hash.merge!(
           { p.email =>
             { :record => p }
@@ -182,10 +151,29 @@ module Importer
 
     def self.all_tag_ids_by_tag_name
       results_hash = {}
-      Tag.all.each { |t|
+      Tag.find(:all, limit: @tag_count).each { |t|
         results_hash.merge!( { t.name => t.id } )
       }
       results_hash
+    end
+
+    def self.call_postgres(file_name)
+      system( %(psql 'user=#{ DATABASE_CONFIG[:username] } #{ 'password=' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } host=#{ DATABASE_CONFIG[:host] || 'localhost' } port=#{ DATABASE_CONFIG[:port] || '5432' } dbname=#{ DATABASE_CONFIG[:database] }' -f #{ file_name }) )
+    end
+
+    def self.call_mysql(file_name)
+      system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] }  #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } -e "source #{ file_name }") )
+    end
+
+    def self.write_sql_file(file_name, sql_column_names, values)
+      if values.blank?
+        File.delete(file_name)
+        file_name = ''
+      else
+        File.open(file_name, 'a+') { |f|
+          f.write(sql_column_names + values + ';')
+        }
+      end
     end
 
   end
