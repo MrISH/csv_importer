@@ -8,7 +8,6 @@ gem 'arel'
 gem 'jquery-rails'
 gem 'acts-as-taggable-on'
 gem 'haml-rails'
-gem 'activerecord-import'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
