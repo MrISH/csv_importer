@@ -8,7 +8,7 @@ module Importer
 
     def self.parse(csv_file_stream)
       return if csv_file_stream.blank?
-      File.open(CSV_FILE_NAME, 'w+') { |f| f.write(csv_file_stream.read) }
+      IO.binwrite(CSV_FILE_NAME, csv_file_stream.read)
       @errors = []
       @users_parsed_count = 0
       start_time = Time.now
@@ -52,14 +52,14 @@ module Importer
       when /mysql2/
         people_file_name = 'tmp/people_mysql.sql'
         tag_file_name = 'tmp/tags_mysql.sql'
-        File.open(people_file_name, 'w+') { |f| f.write( GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + 'INSERT IGNORE INTO people (id,' )}
-        File.open(tag_file_name, 'w+') { |f| f.write( GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + 'INSERT IGNORE INTO tags (id,' )}
+        people_sql_beginning = GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + 'INSERT IGNORE INTO people (id,'
+        tags_sql_beginning = GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + 'INSERT IGNORE INTO tags (id,'
         values_sql_beginning = "('','"
       when /postgresql/
         people_file_name = 'tmp/people_postgres.sql'
         tag_file_name = 'tmp/tags_postgres.sql'
-        File.open(people_file_name, 'w+') { |f| f.write( 'INSERT INTO people (' )}
-        File.open(tag_file_name, 'w+') { |f| f.write( 'INSERT INTO tags (' )}
+        people_sql_beginning = 'INSERT INTO people ('
+        tags_sql_beginning = 'INSERT INTO tags ('
         values_sql_beginning = "('"
       end
       time = Time.now.strftime('%Y-%m-%d %I:%M:%S')
@@ -81,11 +81,11 @@ module Importer
       people_values = people_values.compact.uniq.join(',')
       tag_values = tag_values.flatten.compact.uniq.join(',')
 
-      self.write_sql_file(people_file_name, 'email,created_at,updated_at) VALUES ', people_values )
-      self.write_sql_file(tag_file_name, 'name) VALUES ', tag_values )
+      self.write_sql_file(people_file_name, people_sql_beginning, 'email,created_at,updated_at) VALUES ', people_values )
+      self.write_sql_file(tag_file_name, tags_sql_beginning, 'name) VALUES ', tag_values )
       return people_file_name, tag_file_name
-    # rescue
-    #   @errors << 'build_sql_for_people_and_tags failed to build SQL'
+    rescue
+      @errors << 'build_sql_for_people_and_tags failed to build SQL'
     end
 
 
@@ -94,15 +94,15 @@ module Importer
       when /mysql2/
         taggings_file_name = 'tmp/taggings_mysql.sql'
         people_data_file_name = 'tmp/people_data_mysql.sql'
-        File.open(taggings_file_name, 'w+') { |f| f.write( GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + 'INSERT IGNORE INTO taggings (id,' )}
+        taggings_sql_beginning = GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + 'INSERT IGNORE INTO taggings (id,'
         # because this table has column names 'key' and 'value', we need to use the %Q[] string thing to enable proper escaping of \`
-        File.open(people_data_file_name, 'w+') { |f| f.write( GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + %Q[INSERT IGNORE INTO people_data (id,\`key\`,\`value\`,] )}
+        people_data_sql_beginning = GLOBAL_BUFFER_LENGTH + GLOBAL_MAX_ALLOWED_PACKET + %Q[INSERT IGNORE INTO people_data (id,\`key\`,\`value\`,]
         values_sql_beginning = "('','"
       when /postgresql/
         taggings_file_name = 'tmp/taggings_postgres.sql'
         people_data_file_name = 'tmp/people_data_postgres.sql'
-        File.open(taggings_file_name, 'w+') { |f| f.write( 'INSERT INTO taggings (' )}
-        File.open(people_data_file_name, 'w+') { |f| f.write( 'INSERT INTO people_data (key,value,' )}
+        taggings_sql_beginning = 'INSERT INTO taggings ('
+        people_data_sql_beginning = 'INSERT INTO people_data (key,value,'
         values_sql_beginning = "('"
       end
       time = Time.now.strftime('%Y-%m-%d %I:%M:%S')
@@ -130,11 +130,11 @@ module Importer
       taggings_values = taggings_values.flatten.compact.uniq.join(',')
       people_data_values = people_data_values.flatten.compact.uniq.join(',')
 
-      self.write_sql_file(taggings_file_name, 'tag_id,taggable_id,taggable_type,context,created_at) VALUES ', taggings_values )
-      self.write_sql_file(people_data_file_name, 'person_id,created_at,updated_at) VALUES ', people_data_values )
+      self.write_sql_file(taggings_file_name, taggings_sql_beginning, 'tag_id,taggable_id,taggable_type,context,created_at) VALUES ', taggings_values )
+      self.write_sql_file(people_data_file_name, people_data_sql_beginning, 'person_id,created_at,updated_at) VALUES ', people_data_values )
       return taggings_file_name, people_data_file_name
-    # rescue
-    #   @errors << 'build_sql_for_taggings_and_people_data failed to build SQL'
+    rescue
+      @errors << 'build_sql_for_taggings_and_people_data failed to build SQL'
     end
 
     def self.build_people_hash
@@ -165,14 +165,12 @@ module Importer
       system( %(mysql --max_allowed_packet=2048M -u #{ DATABASE_CONFIG[:username] } #{ '-p' + DATABASE_CONFIG[:password] unless DATABASE_CONFIG[:password].blank? } -D #{ DATABASE_CONFIG[:database] } < #{ file_name }) )
     end
 
-    def self.write_sql_file(file_name, sql_column_names, values)
-      if values.blank?
+    def self.write_sql_file(file_name, sql_beginning, sql_column_names, values)
+      if values.blank? || sql_beginning.blank? || sql_column_names.blank?
         File.delete(file_name)
         file_name = ''
       else
-        File.open(file_name, 'a+') { |f|
-          f.write(sql_column_names + values + ';')
-        }
+        IO.binwrite(file_name, (sql_beginning + sql_column_names + values + ';'))
       end
     end
 
